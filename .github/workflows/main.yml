@@ -36,7 +36,7 @@ jobs:
         run: npm run test
       - name: release
         id: create_release
-        uses: actions/create-release@v1
+        uses: actions/create-release@v1 ${{ github.ref }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
